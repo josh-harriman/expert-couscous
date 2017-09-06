@@ -13,15 +13,15 @@ func (v Vertex) Abs() float64 {
 	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
-func main() {
-	u := Vertex{6, 8}
-	fmt.Println(u.Abs())
-
-	v := Vertex{3, 4}
-	fmt.Println(v.Abs())
-
-	w := Vertex{10, 12}
-	fmt.Println(w.Abs())
+func (v *Vertex) Scale(f float64) {
+	v.X = v.X * f
+	v.Y = v.Y * f
 }
 
+func main() {
+	v := Vertex{3, 4}
+	v.Scale(10)
+
+	fmt.Println(v.Abs())
+}
 
