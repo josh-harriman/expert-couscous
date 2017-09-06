@@ -16,6 +16,9 @@ func (v Vertex) Abs() float64 {
 func main() {
 	v := Vertex{3, 4}
 	fmt.Println(v.Abs())
+
+	w := Vertex{10, 12}
+	fmt.Println(w.Abs())
 }
 
 
